@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gather round</title>
+  <style>
+    :root {
+      --bg-1: #DCD494;
+      --bg-2: #D1805F;
+      --bg-3: #005871;
+      --bg-4: #854C65;
+      --bg-5: #EFDADD;
+      --bg-6: #BE394F;
+      --bg-7: #704A49;
+      --bg-8: #8F3D37;
+      --bg-9: #DC343B;
+      --bg-10: #82643E;
+    }
+
+
+    section {
+      padding: 40px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    section:nth-of-type(2) {
+      background-color: var(--bg-1);
+    }
+
+    section:nth-of-type(3) {
+      background-color: var(--bg-2);
+    }
+
+    section:nth-of-type(4) {
+      background-color: var(--bg-3);
+    }
+
+    section:nth-of-type(5) {
+      background-color: var(--bg-4);
+    }
+
+    section:nth-of-type(6) {
+      background-color: var(--bg-5);
+    }
+
+    section:nth-of-type(7) {
+      background-color: var(--bg-6);
+    }
+
+    section:nth-of-type(8) {
+      background-color: var(--bg-7);
+    }
+
+    section:nth-of-type(9) {
+      background-color: var(--bg-8);
+      color: var(--text-8);
+    }
+
+    section:nth-of-type(10) {
+      background-color: var(--bg-9);
+    }
+
+    section:nth-of-type(11) {
+      background-color: var(--bg-10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20vh 20px;
+      flex: 1;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      font-weight: 700;
+    }
+
+    .subheader {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .content {
+      /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+      color: white;
+      display: flex;
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: center;
+        grid-template-areas: 
+        "text image";
+      
+      transition: all 0.3s ease;
+    }
+
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 25px;
+      background: whitesmoke;
+      border-radius: 20px;
+      justify-content: center; 
+    }
+
+    .text-column h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .text-column p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      color: #000000;
+    }
+
+    .image-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    section:nth-of-type(2n) .content-grid .text-column {
+      order: 1
+    }
+    section:nth-of-type(2n) .content-grid .image-column {
+      order: -1
+    }
+
+    @media (max-width: 992px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .image-column {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .hero .subheader {
+        font-size: 1.7rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="container hero">
+    <div class="hero-content">
+      <h1>The Collector</h1>
+      <div class="subheader">Gather round! Are you sitting comfortably? Then let's begin...</div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>In a small, seaside town, where the salty air filled lungs and the sound of seagulls filled ears, a mysterious shop stood out among the quaint, old buildings. The sign above the door read "Curios and Wonders," and it was shrouded in an aura of secrecy. The shop's interior was a labyrinth of narrow aisles and dimly lit corners, filled with an assortment of peculiar items that seemed to defy explanation. Dusty vases overflowed with forgotten flowers, while vintage clocks ticked away with a slow, mournful rhythm, as if waiting for the return of a long-lost love.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135109_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>As visitors wandered through the shop, they began to notice a recurring theme: objects imbued with a sense of longing. A dusty, old pocket watch seemed to yearn for the touch of its owner's hand, while a faded photograph of a forgotten love smiled wistfully into the void. The Collector watched these reactions with an intensity that bordered on curiosity, her eyes narrowing as she searched for the next piece to add to her collection. Each object told a story of love, loss, and regret, and the Collector's gaze seemed to hold a deep understanding of the human heart.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135128_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>One stormy evening, a young woman named Sophia stumbled into the shop, seeking refuge from the torrential rain. As she pushed open the creaky door, a bell above it let out a soft tinkle, and the Collector looked up from behind the counter, her eyes locking onto Sophia's like a magnet. The air inside the shop was heavy with the scent of old books and damp earth, and Sophia felt an inexplicable pull towards the Collector, as if their fates were somehow intertwined. The storm raged on outside, but inside, a different kind of tempest was brewing.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135148_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>As Sophia ventured deeper into the shop, she began to notice that each object seemed to be connected to her own life story, like pieces of a puzzle being slowly revealed. A vintage locket on a nearby shelf glinted in the dim light, its surface etched with a single, familiar name: her own. The Collector's eyes sparkled with a knowing glint as Sophia's fingers itched to touch the locket, as if an unseen thread was drawing her closer. The air vibrated with an otherworldly energy, and Sophia felt the weight of forgotten memories stirring within her.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135210_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>The Collector's hand extended, her fingers closing around the locket with a gentle yet firm touch. As her skin made contact, the locket sprang open, releasing a whisper of forgotten scents and forgotten dreams. Sophia's memories began to resurface, like a tide of emotions rising from the depths of her soul. She recalled laughter and tears, love and loss, and the Collector's eyes seemed to echo each emotion, as if she had lived a thousand lives before. The shop around them dissolved, leaving only the two women, suspended in a world of their own making.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135230_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>As Sophia's memories swirled around her, the Collector's eyes seemed to hold a deep understanding of the human heart. The air was charged with a sense of possibility, as if the very fabric of reality was about to unravel. The shop's objects, once mere trinkets, now pulsed with a life of their own, their stories intertwining with Sophia's like the threads of a tapestry. The Collector's voice whispered a single word, a single phrase that echoed through the chambers of Sophia's mind: "Remember." And with that, the past and present blurred, becoming one, indistinguishable, yet utterly clear.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135254_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>The Collector's eyes locked onto Sophia's, and in that moment, the boundaries between past and present, between reality and fantasy, dissolved. They were two women, connected by a thread of shared experience, their lives intertwined like the pages of a book. The storm outside receded, and an eerie silence fell over the shop, as if the very air was holding its breath. The objects, the memories, the emotions – all of it coalesced into a single, crystalline moment, where the past and present merged, and Sophia's true self was revealed, shining like a beacon in the darkness.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135318_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>The Collector's gaze was no longer a collector's gaze, but a mirror's gaze, reflecting Sophia's very soul. In this instant, Sophia understood the nature of her existence: a thread in the vast tapestry of human experience, woven from the threads of countless lives. The Collector, it seemed, was not just a collector, but a guardian, a weaver, and a keeper of the forgotten stories that bound them all together. And as Sophia's eyes met the Collector's, she knew that she had finally found a home, a place where her own story would be cherished, and remembered.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135342_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>The Collector's eyes held a secret, a message encoded in the depths of her gaze. Sophia felt the weight of it, like a key turning in a lock, unlocking a door to a new understanding. The Collector's hands, once mere collectors of objects, now held the threads of Sophia's own life, weaving them into a new narrative. The past and present merged, becoming a single, shimmering fabric, as Sophia's eyes locked onto the Collector's, and in that moment, the future unfolded, like a map leading to a destination yet unknown, and yet, already, impossibly familiar.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135409_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>As the moment dissolved, Sophia felt the world shift around her, like the gentle lapping of waves on a distant shore. The Collector's eyes, once pools of mystery, now shone like stars on a clear night. Sophia's heart, once a stranger to her own emotions, now overflowed with a sense of belonging. She knew that she had been given a gift: the gift of a life unfulfilled, a life that could be rewritten at any moment. And with that, Sophia stepped forward, into the light, leaving the Collector's shop, and her own story, forever entwined.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206135436_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
