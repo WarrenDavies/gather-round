@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gather round</title>
+  <style>
+    :root {
+      --bg-1: #DCD494;
+      --bg-2: #D1805F;
+      --bg-3: #005871;
+      --bg-4: #854C65;
+      --bg-5: #EFDADD;
+      --bg-6: #BE394F;
+      --bg-7: #704A49;
+      --bg-8: #8F3D37;
+      --bg-9: #DC343B;
+      --bg-10: #82643E;
+    }
+
+
+    section {
+      padding: 40px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    section:nth-of-type(2) {
+      background-color: var(--bg-1);
+    }
+
+    section:nth-of-type(3) {
+      background-color: var(--bg-2);
+    }
+
+    section:nth-of-type(4) {
+      background-color: var(--bg-3);
+    }
+
+    section:nth-of-type(5) {
+      background-color: var(--bg-4);
+    }
+
+    section:nth-of-type(6) {
+      background-color: var(--bg-5);
+    }
+
+    section:nth-of-type(7) {
+      background-color: var(--bg-6);
+    }
+
+    section:nth-of-type(8) {
+      background-color: var(--bg-7);
+    }
+
+    section:nth-of-type(9) {
+      background-color: var(--bg-8);
+      color: var(--text-8);
+    }
+
+    section:nth-of-type(10) {
+      background-color: var(--bg-9);
+    }
+
+    section:nth-of-type(11) {
+      background-color: var(--bg-10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20vh 20px;
+      flex: 1;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      font-weight: 700;
+    }
+
+    .subheader {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .content {
+      /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+      color: white;
+      display: flex;
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: center;
+        grid-template-areas: 
+        "text image";
+      
+      transition: all 0.3s ease;
+    }
+
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 25px;
+      background: whitesmoke;
+      border-radius: 20px;
+      justify-content: center; 
+    }
+
+    .text-column h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .text-column p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      color: #000000;
+    }
+
+    .image-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    section:nth-of-type(2n) .content-grid .text-column {
+      order: 1
+    }
+    section:nth-of-type(2n) .content-grid .image-column {
+      order: -1
+    }
+
+    @media (max-width: 992px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .image-column {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .hero .subheader {
+        font-size: 1.7rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="container hero">
+    <div class="hero-content">
+      <h1>The Sculpture</h1>
+      <div class="subheader">Gather round! Are you sitting comfortably? Then let's begin...</div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>Ice, Ice, Baby</h2>
+
+<p>In a world where love is a fragile thing, Bob had just signed up for an ice sculpting course. Because, why not? It's not like he had anything better to do with his time. As he trudged onto the ice, he was greeted by a sign that read, "Welcome to the most romantic holiday course ever!" Oh, joy. Bob's eyes met Sarah's, and they both knew they were in for a wild ride. Little did they know, their love would be forged in the fiery depths of icy disappointment and amateur sculpting.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206165737_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>The Great Ice Sculpture Disaster</h2>
+
+<p>The first day of the course was a masterclass in chaos. Bob and Sarah simultaneously attempted to create the same sculpture, resulting in a tangled mess of icicles and a sink full of water. Their instructor, Mrs. Jenkins, beamed with pride, declaring, "It's all about the process, not the product!" Bob and Sarah exchanged a look that said, "Is this really what love is all about?" As they frantically tried to salvage their creations, Mrs. Jenkins handed out a tutorial on "The Art of Ice Sculpture: A Guide for the Clumsy and the Crushed."</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206165755_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>Forced Teamwork</h2>
+
+<p>In a bold attempt to foster creativity, Mrs. Jenkins paired Bob and Sarah on a project. Because, clearly, the key to romance is being forced to work with someone who hates you. As they frantically tried to collaborate, their differing artistic visions clashed like two titans on opposite sides of the ice. Bob's sculpture resembled a wonky ice cube, while Sarah's masterpiece was a majestic (and slightly menacing) ice dragon. Their instructor, Mrs. Jenkins, beamed with pride, declaring, "It's all about the synergy!" Uh-huh, because nothing says "synergy" like a couple of hapless ice sculptors.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206165815_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>Holiday Cheer</h2>
+
+<p>As the course progressed, Bob and Sarah were forced to participate in a festive holiday party. Because what's a romantic comedy without a cringe-worthy holiday montage? They sang awkwardly to the carols, exchanged forced small talk, and generally made fools of themselves. Bob tripped on the dance floor, and Sarah face-planted into a plate of eggnog. The audience (comprising of their fellow course classmates, who were all secretly judging them) applauded politely, no doubt wondering how these two would manage to create something beautiful on the ice sculpture course. Joy to the world, indeed.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206165836_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>The Ice Sculpture Competition</h2>
+
+<p>As the competition heated up, Bob and Sarah found themselves in a battle of wits... and icicles. They frantically sculpted, argued, and sabotaged each other's projects. The tension was palpable, and the audience was on the edge of their seats (or, in this case, the edge of the ice rink). Who would emerge victorious? The winner would receive a coveted spot in a prestigious ice sculpture exhibition, and the coveted title of "Most Likely to Make a Mess of Romance." Spoiler alert: it was Bob and Sarah, because what's romance without a little chaos?</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206165858_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>Love in the Time of Icicles</h2>
+
+<p>As the competition drew to a close, Bob and Sarah's icy rivalry began to thaw. They exchanged heated glances, their competitive spirits giving way to something more. It was a moment of tender tenderness, if you will. They shared a sparkling glance, and Bob's heart skipped a beat. Or, rather, it skipped a beat and then immediately got stuck in the ice. Because, romance. As they gazed into each other's eyes, the camera panned out to reveal the mess they'd made of the ice rink. Ah, love in all its messy, beautiful glory.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206165922_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>The Ice Sculpture Disaster 2.0</h2>
+
+<p>Just when Bob and Sarah thought they'd finally found love amidst the ice, disaster struck. Bob's clumsy footwork caused a catastrophic ice collapse, sending Sarah tumbling into a snowbank. As she emerged, dazed and covered in snow, Bob rushed to her side, declaring, "I've got you!" Cue the swooning music and the realization that this was not, in fact, a romantic moment. It was just Bob being Bob. As they stumbled back to the course, hand in hand, they knew their love was doomed from the start. Or, at the very least, from the start of the next ice sculpture.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206165947_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>The Great Ice Sculpture Heist</h2>
+
+<p>In a shocking turn of events, someone (cough, Tiffany, cough) stole the winning ice sculpture, leaving Bob and Sarah to frantically recreate their masterpiece from memory. Because, what's a romance without a dastardly plot twist? As they chased Tiffany through the snow-covered streets, their love was put to the test. Would they find the stolen sculpture, or would their love melt away like the ice? Spoiler alert: they found it, and it was just as lovely as their original. Cue the triumphant music and the realization that romance is all about the journey, not the destination.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206170013_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>The Ice Sculpture Showdown</h2>
+
+<p>The final showdown between Bob and Sarah and Tiffany was underway. The crowd held its collective breath as the three ice sculptors faced off in a battle of artistry. Who would emerge victorious? The crowd gasped in horror as Tiffany's sculpture, a majestic ice castle, was revealed. Bob and Sarah's masterpiece, a slightly lopsided ice swan, was...adequate. The judges deliberated, and in a shocking twist, declared Bob and Sarah the winners. Cue the confetti and the realization that maybe, just maybe, romance is about being slightly above average at something.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206170040_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <h2>The Frosty Conclusion (Or Is It?)</h2>
+
+<p>As Bob and Sarah accepted their prize, they shared a tender moment, and the crowd aww-ed. But then, in a shocking revelation, Mrs. Jenkins, their instructor, revealed that the real prize was not winning, but the lessons they learned along the way. Like, Bob learned that romance is all about the mess, and Sarah learned that, yes, ice sculpting can be fun. Cue the bittersweet music and the realization that maybe, just maybe, this romance thing wasn't so bad after all. But only because they got to make a mess of ice and each other.</p>
+      </div>
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206170108_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
