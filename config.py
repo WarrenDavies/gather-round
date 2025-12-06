@@ -2,6 +2,7 @@
 
 # Add local path to LLM model or HF id, 
 path_to_model = "./models/Llama-3.2-3B-Instruct-Q4_K_M.gguf"
+path_to_model = "../jenbot/models/llama-3.2-3b-instruct-abliterated-q4_k_m.gguf"
 max_context_size = 32768 # total tokens allowable in the context
 number_of_threads = 20 # number of CPU threads to use 
 verbose_warnings = False # Silence llama_cpp warnings/messages
@@ -47,7 +48,8 @@ bots = {
 # Choose the bot that you want to use here.
 bot = bots["jenbot"]
 
-story_to_write = "A Christmas story in which Santa loses the naughty list. To get it back, he has to speak to Mrs Claus, Rudolph, a gingerbread man, Frosty the snowman, a talking candy cane, an Elf."
+project_name = "troy"
+story_to_write = "The story of the Trojan War"
 story_mode = "auto" # interactive,where you can direct and refine as the story progresses, or auto, let the LLM do it's thing
 
 

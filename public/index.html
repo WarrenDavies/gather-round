@@ -125,7 +125,7 @@
       margin-bottom: 0px;
     }
 
-    .section-1 {
+    .example-gallery {
       background-color: var(--bg-light);
       padding: 50px 0;
     }
@@ -255,15 +255,7 @@
     }
 
     @media (max-width: 768px) {
-      .section-1 {
-        padding: 80px 0;
-      }
-
-      .section-2 {
-        padding: 80px 0;
-      }
-
-      .section-3 {
+      .example-gallery {
         padding: 80px 0;
       }
 
@@ -321,7 +313,7 @@
       }
     }
 
-    .section-1, .section-2, .section-3 {
+    .example-gallery{
       animation: fadeIn 1s ease;
     }
 
@@ -353,9 +345,20 @@
     </div>
   </section>
 
-  <section id="section-1" class="section-1">
+  <section id="example-gallery" class="example-gallery">
+    <div class="features-grid">
+      
+      <a href="troy/index.html" class="feature-card-link">
+        <div class="feature-card">
+            <h3>The Trojan War</h3>
+            <p>Europe's earliest and greatest Epic retold - even correctly in parts!</p>
+            <ul>
+                <li><strong>LLM</strong>: llama 3.2 3B Instruct Q4 K M</li>
+                <li><strong>Image model</strong>: Stable Diffusion 1.5</li>
+            </ul>
+       </div>
+    </a>
     <a href="christmas/index.html" class="feature-card-link">
-        <div class="features-grid">
         <div class="feature-card">
             <h3>Santa's Search</h3>
             <p>Santa loses his naughty list and goes on a quest to find it.</p>

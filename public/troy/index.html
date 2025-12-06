@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gather round</title>
+  <style>
+    :root {
+      --bg-1: #DCD494;
+      --bg-2: #D1805F;
+      --bg-3: #005871;
+      --bg-4: #854C65;
+      --bg-5: #EFDADD;
+      --bg-6: #BE394F;
+      --bg-7: #704A49;
+      --bg-8: #8F3D37;
+      --bg-9: #DC343B;
+      --bg-10: #82643E;
+    }
+
+
+    section {
+      padding: 40px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    section:nth-of-type(2) {
+      background-color: var(--bg-1);
+    }
+
+    section:nth-of-type(3) {
+      background-color: var(--bg-2);
+    }
+
+    section:nth-of-type(4) {
+      background-color: var(--bg-3);
+    }
+
+    section:nth-of-type(5) {
+      background-color: var(--bg-4);
+    }
+
+    section:nth-of-type(6) {
+      background-color: var(--bg-5);
+    }
+
+    section:nth-of-type(7) {
+      background-color: var(--bg-6);
+    }
+
+    section:nth-of-type(8) {
+      background-color: var(--bg-7);
+    }
+
+    section:nth-of-type(9) {
+      background-color: var(--bg-8);
+      color: var(--text-8);
+    }
+
+    section:nth-of-type(10) {
+      background-color: var(--bg-9);
+    }
+
+    section:nth-of-type(11) {
+      background-color: var(--bg-10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20vh 20px;
+      flex: 1;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      font-weight: 700;
+    }
+
+    .subheader {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .content {
+      /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+      color: white;
+      display: flex;
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: center;
+        grid-template-areas: 
+        "text image";
+      
+      transition: all 0.3s ease;
+    }
+
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 25px;
+      background: whitesmoke;
+      border-radius: 20px;
+      justify-content: center; 
+    }
+
+    .text-column h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .text-column p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      color: #000000;
+    }
+
+    .image-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    section:nth-of-type(2n) .content-grid .text-column {
+      order: 1
+    }
+    section:nth-of-type(2n) .content-grid .image-column {
+      order: -1
+    }
+
+    @media (max-width: 992px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .image-column {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .hero .subheader {
+        font-size: 1.7rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="container hero">
+    <div class="hero-content">
+      <h1>The Trojan War</h1>
+      <div class="subheader">Are you sitting comfortably? Then let's begin...</div>
+    </div>
+  </section>
+
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>In the sweltering heat of the Greek summer, the city-states of Greece and Troy teetered on the precipice of war. King Priam of Troy, a just and fair ruler, had long maintained a fragile peace with the Greeks, his people living in the shadow of the looming hills. But beneath the surface, a maelstrom of emotions churned, like the Aegean Sea in a storm. The air was heavy with the scent of blooming laurel and the soft rustle of olive leaves, as if the trees themselves whispered warnings of the impending doom.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210701_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>On Mount Ida, the gods gathered to witness the judgement of Paris, their whispers weaving a tapestry of fate. Aphrodite, goddess of love, presented the young prince with three golden apples, each inscribed with a promise that seemed too divine to be true. Zeus, king of the gods, decreed that the apple chosen by Paris would reveal the true nature of his heart's desire, but the god's own heart remained shrouded in mystery. As Paris picked the apple inscribed with 'Helen', a shiver ran through the gods, for in that moment, the course of history was forever altered.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210719_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>In secret, Paris and Helen's love blossomed, a flame that burned brighter with each passing day. But their happiness was short-lived, for the whispers of their affair soon reached King Menelaus, Helen's husband, and the Greeks were galvanized into action. As Paris and Helen exchanged vows of love, the wind whispers a different tale, one of deceit and betrayal. Meanwhile, in Troy, Priam sensed the darkness gathering on the horizon, a feeling that gnawed at his heart like a thief in the night. The gods, too, felt the tremors of war, their silence a heavy weight.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210740_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>As the Greeks set sail for Troy, their ships cut through the Aegean like a scimitar, leaving a trail of sea foam and shattered dreams in their wake. The city of Troy, once a beacon of hope and refuge, now loomed on the horizon, a monolith of defiance and determination. Agamemnon, the king of kings, stood tall at the forefront of the legion, his eyes burning with a fire that would not be quenched. Achilles, the greatest warrior of the Greeks, stood beside him, his presence a harbinger of doom, his name whispered in awe and terror.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210800_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>The day of reckoning arrived, and the Greeks clashed with the Trojans on the blood-soaked plains of Troy. Achilles and Hector, the greatest warriors of the two armies, engaged in a duel that would decide the fate of the city. The clash of steel on steel echoed through the valleys, as the gods watched from above, their allegiances torn asunder. Paris, the prince of Troy, watched in horror as his brother, Hector, fell to the ground, his life slipping away like grains of sand in an hourglass. The city trembled, and the gods wept.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210822_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>Under the guise of a gift, the Greeks presented the Trojans with a magnificent golden horse, its surface glinting like the sun on the Aegean. As the Trojans welcomed the offering, the Greeks hid within its belly, their hearts racing with anticipation. Odysseus, the cunning king, had devised a plan to infiltrate the city, to bring about its downfall. Meanwhile, Hector's brother, Aeneas, sensed the treachery brewing, but the gods remained silent, their fate inextricably linked to the outcome. The golden horse, a vessel of deceit, stood as a harbinger of Troy's downfall.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210846_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>As night descended upon Troy, the Greeks emerged from the golden horse, their hearts ablaze with fury. Achilles, fueled by rage and a sense of honor, charged into battle, his legendary spear flashing in the moonlight. The city walls trembled, the gates splintering like brittle wood as the Greeks poured inside. Priam's sons, Aeneas and Deiphobus, fought valiantly, but their efforts were for naught against the tidal wave of Greek warriors. Troy's fate was sealed, its people fleeing in terror, as the gods watched with a mixture of awe and sorrow, their prophecies fulfilled.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210910_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>In the aftermath, the Greeks laid waste to the city, pillaging its riches and claiming its glory. As the dust settled, the survivors of Troy began their arduous journey to a new home, guided by the prophecy of a young Aeneas. Meanwhile, the Greeks, forever changed by their experience, set sail for home, their hearts heavy with the memories of a war that had claimed so many lives. Priam, the king of Troy, lay on his deathbed, his final breath a whispered apology to the gods, for the fate that had befallen his beloved city.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206210935_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

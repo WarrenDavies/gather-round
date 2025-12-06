@@ -5,7 +5,7 @@ import shutil
 from imagejenerator.models import registry
 import config
 
-project_name = "christmas"
+project_name = config.project_name
 template_name = "default"
 project_path = f"public/{project_name}/"
 section_path = f'src/templates/{template_name}/section.html'
