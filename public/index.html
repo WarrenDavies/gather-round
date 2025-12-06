@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gather Round | Examples</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    :root {
+      --primary-dark: #1a2a6c;
+      --primary: #00c6ff;
+      --primary-light: #00d8ff;
+      --secondary: #ff6b6b;
+      --text-dark: #1a1a2e;
+      --text-light: #ffffff;
+      --bg-light: #f8f9fa;
+      --accent: #0072ff;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      --transition: all 0.3s ease;
+    }
+
+    body {
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    .navbar {
+      width: 100%;
+      z-index: 1000;
+      background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+      padding: 20px 5%;
+      transition: var(--transition);
+      backdrop-filter: blur(10px);
+    }
+
+    .navbar-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--text-light);
+      text-decoration: none;
+      text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      transition: var(--transition);
+    }
+
+    .logo span {
+      color: var(--primary-light);
+    }
+
+    .logo:hover {
+      transform: translateX(5px);
+    }
+
+    .section-highlight {
+      padding: 150px 5% 100px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+      color: var(--text-light);
+      text-align: center;
+      margin-bottom: 50px;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .section-highlight h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-highlight h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--primary-light);
+      border-radius: 2px;
+    }
+
+    .section-highlight p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 0;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+      letter-spacing: -0.5px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: 0 auto;
+      opacity: 0.9;
+      margin-bottom: 0px;
+    }
+
+    .example-gallery {
+      background-color: var(--bg-light);
+      padding: 50px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      color: var(--primary);
+    }
+
+    .section-title p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .feature-card {
+      background: var(--primary-dark);
+      border-radius: 12px;
+      padding: 40px 30px;
+      text-align: center;
+      transition: var(--transition);
+      box-shadow: var(--shadow);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    a.feature-card-link,
+    a.feature-card-link:visited,
+    a.feature-card-link:focus,
+    a.feature-card-link:hover {
+        text-decoration: none;
+    }
+
+    .feature-card ul li {
+        color: white;
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    .feature-card p {
+        padding-bottom: 20px;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    }
+
+    .feature-icon {
+      font-size: 3rem;
+      color: var(--primary-light);
+      margin-bottom: 20px;
+      background: rgba(0, 200, 255, 0.15);
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+    }
+
+    .feature-card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: var(--text-light);
+    }
+
+    .feature-card p {
+      color: #e0e0ff;
+      line-height: 1.6;
+      opacity: 0.9;
+    }
+
+
+    @media (max-width: 992px) {
+      .navbar {
+        padding: 15px 10%;
+      }
+
+      .navbar-container {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+
+      .mobile-menu {
+        display: block;
+      }
+
+      .mobile-close {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero p {
+        font-size: 1.1rem;
+      }
+
+      .section-title h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .example-gallery {
+        padding: 80px 0;
+      }
+
+      .hero {
+        padding: 70px 0;
+      }
+
+      .section-highlight {
+        padding: 80px 0 50px;
+      }
+
+      .section-highlight h2 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .navbar {
+        padding: 10px 5%;
+      }
+
+      .logo {
+        font-size: 1.4rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .section-highlight h2 {
+        font-size: 1.8rem;
+      }
+
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+    }
+
+    .section-highlight {
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .example-gallery{
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <nav class="navbar sticky">
+    <div class="navbar-container">
+      <a href="#" class="logo">Gather<span>Round</span></a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Examples</h1>
+      <p>Short stories made with Gather Round</p>
+    </div>
+  </section>
+
+  <section id="example-gallery" class="example-gallery">
+    <div class="features-grid">
+      
+      <a href="troy/index.html" class="feature-card-link">
+        <div class="feature-card">
+            <h3>The Trojan War</h3>
+            <p>Europe's earliest and greatest Epic retold - even correctly in parts!</p>
+            <ul>
+                <li><strong>LLM</strong>: llama 3.2 3B Instruct Q4 K M</li>
+                <li><strong>Image model</strong>: Stable Diffusion 1.5</li>
+            </ul>
+       </div>
+    </a>
+    <a href="christmas/index.html" class="feature-card-link">
+        <div class="feature-card">
+            <h3>Santa's Search</h3>
+            <p>Santa loses his naughty list and goes on a quest to find it.</p>
+            <ul>
+                <li><strong>LLM</strong>: llama 3.2 3B Instruct Q4 K M</li>
+                <li><strong>Image model</strong>: Stable Diffusion 1.5</li>
+            </ul>
+       </div>
+    </a>
+    <a href="the_collector/index.html" class="feature-card-link">
+        <div class="feature-card">
+            <h3>The Collector</h3>
+            <p>What happens when you let the model write any story with no guidance.</p>
+            <ul>
+                <li><strong>LLM</strong>: llama 3.2 3B Instruct Q4 K M</li>
+                <li><strong>Image model</strong>: Stable Diffusion 1.5</li>
+            </ul>
+        </div>
+    </a>
+    <a href="the_sculpture/index.html" class="feature-card-link">
+        <div class="feature-card">
+            <h3>The Sculpture</h3>
+            <p>What happens you tell the LLM not to take the task seriously.</p>
+            <ul>
+                <li><strong>LLM</strong>: llama 3.2 3B Instruct Q4 K M</li>
+                <li><strong>Image model</strong>: Stable Diffusion 1.5</li>
+            </ul>
+        </div>
+    </a>
+    </div>
+  </section>
+
+</body>
+</html>

@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gather round</title>
+  <style>
+    :root {
+      --bg-1: #DCD494;
+      --bg-2: #D1805F;
+      --bg-3: #005871;
+      --bg-4: #854C65;
+      --bg-5: #EFDADD;
+      --bg-6: #BE394F;
+      --bg-7: #704A49;
+      --bg-8: #8F3D37;
+      --bg-9: #DC343B;
+      --bg-10: #82643E;
+    }
+
+
+    section {
+      padding: 40px;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+
+    section:nth-of-type(2) {
+      background-color: var(--bg-1);
+    }
+
+    section:nth-of-type(3) {
+      background-color: var(--bg-2);
+    }
+
+    section:nth-of-type(4) {
+      background-color: var(--bg-3);
+    }
+
+    section:nth-of-type(5) {
+      background-color: var(--bg-4);
+    }
+
+    section:nth-of-type(6) {
+      background-color: var(--bg-5);
+    }
+
+    section:nth-of-type(7) {
+      background-color: var(--bg-6);
+    }
+
+    section:nth-of-type(8) {
+      background-color: var(--bg-7);
+    }
+
+    section:nth-of-type(9) {
+      background-color: var(--bg-8);
+      color: var(--text-8);
+    }
+
+    section:nth-of-type(10) {
+      background-color: var(--bg-9);
+    }
+
+    section:nth-of-type(11) {
+      background-color: var(--bg-10);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f8f9fa;
+      overflow-x: hidden;
+    }
+
+    .container {
+      min-height: 100vh;
+      display: flex;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20vh 20px;
+      flex: 1;
+    }
+
+    .hero-content {
+      max-width: 800px;
+    }
+
+    h1 {
+      font-size: 4.5rem;
+      margin-bottom: 1.5rem;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+      font-weight: 700;
+    }
+
+    .subheader {
+      font-size: 2rem;
+      margin-bottom: 3rem;
+      opacity: 0.9;
+      font-weight: 300;
+      line-height: 1.4;
+    }
+
+    .content {
+      /* background: linear-gradient(135deg, #00c6ff, #0072ff); */
+      color: white;
+      display: flex;
+      flex: 1;
+      padding: 40px 20px;
+    }
+
+    .content-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      max-width: 1600px;
+      margin: 0 auto;
+      align-items: center;
+        grid-template-areas: 
+        "text image";
+      
+      transition: all 0.3s ease;
+    }
+
+    .text-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 20px 25px;
+      background: whitesmoke;
+      border-radius: 20px;
+      justify-content: center; 
+    }
+
+    .text-column h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #000000;
+    }
+
+    .text-column p {
+      font-size: 1.25rem;
+      opacity: 0.9;
+      line-height: 1.7;
+      color: #000000;
+    }
+
+    .image-column {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    .image-container {
+      width: 100%;
+      max-width: 500px;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+
+
+    .image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    section:nth-of-type(2n) .content-grid .text-column {
+      order: 1
+    }
+    section:nth-of-type(2n) .content-grid .image-column {
+      order: -1
+    }
+
+    @media (max-width: 992px) {
+      .content-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .image-column {
+        display: none;
+      }
+      
+      .hero h1 {
+        font-size: 3.5rem;
+      }
+      
+      .hero .subheader {
+        font-size: 1.7rem;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <section class="container hero">
+    <div class="hero-content">
+      <h1>Santa's Search</h1>
+      <div class="subheader">Gather round! Are you sitting comfortably? Then let's begin...</div>
+    </div>
+  </section>
+
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>Midnight crept in like a thief, stealing the last vestiges of Christmas magic. The North Pole's bustling workshop, once a whirlwind of joy and laughter, now hummed with a sense of unease. Elves scurried about, their usually merry eyes downcast, as if weighed down by the weight of the world. Santa's booming laughter, a familiar sound, was noticeably absent. A frantic search ensued, but every room, every shelf, and every nook seemed to be devoid of the one thing that could bring the night back on track: Santa's list, the keeper of Christmas secrets.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184113_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>Mrs. Claus's warm kitchen, a haven from the chaos, beckoned Santa with its familiar scent of baking and love. He entered, his face etched with worry, and found her poised beside the stove, a spatula in hand. Her eyes, a deep well of compassion, met his, and she listened attentively as he recounted his tale of woe. A gentle smile played on her lips, and for a moment, the weight of the world seemed to lift. But as he spoke, a hint of mischief danced in her eyes, and Santa sensed that this was no ordinary crisis.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184131_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>As the night deepened, Santa's sleigh materialized beside the kitchen, its wooden slats polished to a warm sheen. Rudolph's glowing nose cast a soft light on the scene, illuminating the worried faces of the Clauses. With a gentle nod, Santa accepted the reins, and the reindeer burst into a frenzied trot. The winter landscape blurred into a kaleidoscope of color and light as they soared over snow-covered fields and twinkling villages. The wind whipped through Santa's hair, and his heart swelled with determination – he would find the list, no matter the cost.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184150_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>The scent of sweet treats wafted through the crisp air, drawing Santa to a quaint bakery nestled in the heart of a snow-covered village. Inside, a charming gingerbread man greeted him with a wide smile, his icing eyes twinkling with mirth. "Oh dear, oh dear!" the little man exclaimed, his voice trembling with urgency. "I saw the list fall from Santa's hands during my busiest baking hour! It's a crumbly trail, but I think I can help you follow it – if you're willing to trust a humble gingerbread man's instincts." Santa's eyes locked onto the gingerbread man's.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184211_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>Frosty's frozen eyes sparkled with a hint of mischief as Santa arrived at the snowman's icy abode. The jolly snowman's usual grin was replaced by a somber expression, his carrot nose sagging in concern. "I'm so sorry, Santa," Frosty said, his voice a gentle breeze. "I got a bit carried away during our snowy romp, and I inadvertently froze the list in a block of ice. I can try to... thaw it out, but it won't be easy." Santa's eyes widened as he envisioned the consequences of losing the list. Frosty's frozen fingers seemed to hold the only key.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184234_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>In a hidden glade, a wispy figure beckoned Santa with a sugary smile. The candy cane, its red and white stripes gleaming in the moonlight, presented Santa with a riddle: "What can be broken, but never held?" Santa's brow furrowed in concentration as he pondered the answer. Elara, the enigmatic elf, watched with an air of quiet amusement, her eyes sparkling with a hint of mischief. The candy cane's words seemed to dance on the wind, taunting Santa with their cleverness. Could the answer lie within the sweetest of treats?</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184257_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>In a hidden glade, Elara's eyes gleamed with an otherworldly light as she revealed a small, intricately carved wooden box. "The answer lies within," she whispered, her voice barely audible over the rustling of leaves. Santa's fingers trembled as he opened the box, revealing a delicate, snowflake-shaped key. The key's surface etched with tiny stars, it seemed to shimmer with an ethereal light. Elara's smile grew enigmatic once more, leaving Santa to ponder the key's significance. What did this mysterious key unlock, and how would it aid him in his quest to reclaim the lost list?</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184321_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Section 2: Content Area -->
+  <section class="container content">
+    <div class="content-grid">
+      <div class="text-column">
+        <p>Within the crystal orb, the list materialized, its pages fluttering open to reveal the names of the naughty children. Santa's face fell, but a sense of wonder dawned as he realized this was an opportunity to rekindle the spirit of Christmas. He thought of the joy, the laughter, and the love that filled the hearts of children everywhere. With a newfound sense of purpose, Santa grasped the list, his eyes shining with tears. The room began to fade, and the Clauses' workshop was bathed in a warm, golden light. Christmas magic was reborn, and so was Santa's heart.</p>
+      </div>
+      
+      <div class="image-column">
+        <div class="image-container">
+          <img src="images/20251206184347_no0.png" alt="" class="image">
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
