@@ -1,2 +1,3 @@
 # gather-round
-AI story generator
+
+AI story generator.
